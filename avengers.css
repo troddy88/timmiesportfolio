@@ -1,0 +1,286 @@
+.wrapper {
+  background-image: url("images/Ultimate Avengers.jpg");
+  background-repeat: no-repeat;  
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  color: #ffffff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+ 
+.header {
+  border-radius: 1rem;
+}
+
+.block-paragraph {
+  text-align: justify;
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1em;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #00ddff;
+  color: black;
+}
+
+.flip-box-front img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.flip-box-back img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: rgb(228, 121, 247);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.s-main {
+  width: 25%;
+  padding: 1%;
+  margin-left: 1%;
+  border-radius: 1rem;
+}
+
+.navMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #ffffff;
+  float: left;
+}
+.navList a {
+  display: block;
+  padding: 2em;
+  text-decoration: none;
+}
+
+.navList a.active {
+  background-color: #00319c;
+  color: #ffffff; 
+}
+
+.navList a:hover:not(.active) {
+  background-color: #00319c;
+  color: #ffffff;
+
+}
+
+#donateForm {
+text-align: left;
+margin-left: 35%;
+}
+
+.button {
+display: inline-block;
+font-size: 3vw;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #026b81;
+background-color: turquoise;
+border: none;
+border-radius: 1vw;
+box-shadow: 0 .5vw #008279;
+}
+
+.button:hover {
+color: #000000;
+background-color: #ffffff;
+}
+
+.button:active {
+box-shadow: 0 .25vw #768200;
+transform: translateY(.2vw);
+}
+
+/*  .navList {
+  display: inline;
+  padding-left: 1em;
+} */
+
+/*  a:link {
+  color: #1919ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #5b5b5b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
+  text-decoration: none;
+} */
+
+.fa:link {
+color: #1919ad;
+text-decoration: none;
+}
+
+.fa:visited {
+  color:#000000; 
+  text-decoration: none;
+}
+
+.fa:hover {
+color: #ffffff;  
+text-decoration: none;
+}
+
+.fa:active {
+color: red;
+text-decoration: none;
+
+}
+.noBullet {
+  list-style-type: none;
+}
+
+#listItalic {
+  font-style: italic;
+}
+
+.headingLeft {
+  text-align: left;
+}
+
+.headingRight {
+  text-align: right;
+  float: right;
+}
+
+table {
+  clear: right;
+}
+
+th,td{
+  padding-right: 20em;
+  padding-bottom: 1em;
+}
+
+footer {
+  clear: left;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .s-main {
+    width: 100%;
+    margin: 0;
+    float: none;
+}
+
+.flip-box {
+  width: 100%;
+}
+
+.flip-box-inner {
+  width: 100%;
+}
+
+.img-sm {
+  aspect-ratio: 2/3;
+}
+
+.navMenu {
+  clear: left;
+  width: 100%;
+}
+
+.navList {
+  float: left;
+}
+
+.navList a {
+  display: block;
+  text-align: center;
+  padding: .5em;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.wrapper {
+  margin-left: 0;
+}
+
+}
+
+@media print {
+  nav, .navMenu {
+    display: none;
+  }
+
+  .wrapper {
+    margin-left: 0;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+}

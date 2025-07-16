@@ -1,0 +1,114 @@
+<!--Tim Roddy-->
+<!--Lab10-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Donate</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="w3-top">
+            <!--  <ul class="navMenu">
+                 <li class="navList"><a href="index.html">HOME</a></li>
+                 <li class="navList"><a href="resume.html">RESUME</a></li>
+                 <li class="navList"><a href="interests.html">INTERESTS</a></li>
+                 <li class="navList"><a href="about.html">ABOUT</a></li>
+                 <li class="navList"><a class="active" href="donate.html">DONATE</a></li>                    
+             </ul>  -->
+             <div class="w3-bar w3-grey">
+                <a class="w3-bar-item w3-button" href="index.html">HOME</a>
+                <a class="w3-bar-item w3-button" href="interests.html">INTERESTS</a>
+                <a class="w3-bar-item w3-button w3-indigo" href="donate.html">DONATE</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">ABOUT</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a class="w3-bar-item w3-button" href="about.html">ABOUT</a>
+                        <a class="w3-bar-item w3-button" href="resume.html">RESUME</a>
+                    </div> <!--dropdwon content-->
+                </div> <!-- dropdown div-->
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">SITES</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a class="w3-bar-item w3-button w3-hover-silver" href="avengers.html">AssembleThe8</a>
+                        <a class="w3-bar-item w3-button w3-hover-silver" href="galactus.html">TheUltimateThreat</a>
+                    </div> <!-- end dropdwon content-->
+                </div> <!-- dropdown div-->
+            </div> <!--bar div-->
+        </nav>
+        <div class="wrapper">
+            <header>
+                <h2>Tim Roddy</h2>
+                <h3>Student - Information Technology</h3>
+                <h4>Middle Georgia State University</h4>
+            </header>
+            <hr>            
+            <main>
+                <h1 class="w3-spin"> Donate</h1> <!--spin-->                
+                <iframe src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3N2djlhYXpqZWMxdDFlcGFqNzNsNXZrMG9hcGNvdmNvNmc4bXRoYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YJjvTqoRFgZaM/giphy.gif" width="500" height="500"></iframe>
+                <p><a class="white" href="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3N2djlhYXpqZWMxdDFlcGFqNzNsNXZrMG9hcGNvdmNvNmc4bXRoYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YJjvTqoRFgZaM/giphy.gif">via Giphy</a></p>
+                <h2 class="w3-panel w3-green">You can give me money here:</h2> <!--Alert panel-->
+                <div id="donateForm">
+                    <form>
+                        <label for ="fname">First Name:</label>
+                        <input class="w3-input" type="text" id="fname"> 
+                        <br>
+                        <label for ="lname">Last Name:</label>
+                        <input class="w3-input" type="text" id="lname"> 
+                        <br>
+                        <label for ="email">Email:</label>
+                        <input class="w3-input" type="email" id="email"> 
+                        <br>
+                        <label for ="date">Date:</label>
+                        <input class="w3-input" type="date" id="date"> 
+                        <br>
+                        <label for ="phonetype">Phone Type:</label>
+                        <select class="w3-select" id="phonetype"> 
+                            <option>Landline</option>
+                            <option>Mobile</option>
+                            <option>working</option>
+                        </select>
+                        <br>
+                        <label for ="phone">Phone:</label>
+                        <input class="w3-input" type="text" id="phone" placeholder="888-888-8888" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        <br>
+                        <label for ="amount">Donation Amount:</label>
+                        <input class="w3-input" type="number" id="amount" min="0"> 
+                        <br>
+                        <label for ="cc">Credit Card Number:</label>
+                        <input class="w3-input" type="text" id="cc" minlength="15" maxlength="16"> 
+                        <!--minlenght/maxlength only for email/pw/search/tel/text/url (not number)-->
+                        <!--could use min/max values-->
+                        <br>
+                        <label for ="secureCode">Security Code:</label>
+                        <input class="w3-input" type="text" id="secureCode" maxlength="3" size="3"> 
+                        <br>
+                        <label for ="expDate">Expiration Date:</label>
+                        <input class="w3-input" type="date" id="expDate"> 
+                        <br>
+                        <input class="w3-check" type ="checkbox" id="eula">
+                        <label for="eula"  >I Agree to the Terms and Conditions in EULA.</label>
+                        <br>
+                        <br>
+                        <button class="button" type="submit" id="btnSubmit">Submit</button>
+                    </form>
+                </div> <!--donateForm-->
+            </main>
+            <div class="footer">
+            <footer>
+                <p>
+                    Tim Roddy<br>
+                    Contact:<br>
+                    8088 Middle Rd, Orlando, GA 33333<br>
+                    888-888-8888<br>
+                    tim.roddy@mga.edu<br>
+                    &copy; 2025
+                </p>
+                <a href="https://www.facebook.com" class="fa fa-facebook"><span class="sr-only">Facebook</span></a><a href="https://www.instagram.com" class="fa fa-instagram"><span class="sr-only">Instagram</span></a><a href="https://www.linkedin.com" class="fa fa-linkedin"><span class="sr-only">LinkedIn</span></a></footer>
+            </div> <!--footer-->
+        </div> <!--wrapper-->
+    </body>
+</html>

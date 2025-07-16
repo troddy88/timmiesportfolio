@@ -1,0 +1,124 @@
+<!--Tim Roddy-->
+<!--Lab10-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Ultimate Threat</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="galactus.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid wrapper">
+            <nav class="w3-top">
+                <div class="w3-bar w3-black">
+                    <a class="w3-bar-item w3-button w3-hover-silver" href="galactus.html">HOME</a>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button">SITES</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                            <a class="w3-bar-item w3-button w3-hover-silver" href="avengers.html">AssembleThe8</a>
+                            <a class="w3-bar-item w3-button w3-hover-silver" href="classified.html">CLASSIFIED</a>
+                            <a class="w3-bar-item w3-button" href="index.html">Tim's Portfolio</a>
+                        </div> <!-- end dropdwon content-->
+                    </div> <!-- end dropdown div-->
+                </div> <!-- end bar div-->
+            </nav>
+            <br>
+            <br>
+            <header class="container">
+                <h1 style="font-family: 'Wellfleet'; font-size: 2.5em;">The Ultimate Threat</h1>                    
+            </header>
+            <main> 
+                <section class="container s-main float-md-start">
+                    <h2 style="font-size: 2em;">Welcome to The Ulimate Threat</h2>
+                    <p>The Ultimate Threat is a website to showcase the initial antagonist to my elite team of Ultimate Avengers.</p>
+                </section>
+                    <section class="d-flex justify-content-end p-5"> <!--galactus-->
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front rounded">
+                                    <h2>Galactus</h2>
+                                    <img src="images/galactus.jpg" alt="Galactus" class="img-fluid">
+                                </div> <!-- end flip-box-front -->
+                                <div class="flip-box-back rounded">
+                                    <h2>Galan</h2>
+                                    <img src="images/galan.jpg" alt="Galan" class="img-fluid rounded-bottom">
+                                </div> <!-- end flip-box-back -->
+                            </div> <!-- end flip-box-inner -->
+                        </div> <!-- end flip-box -->
+                    </section>
+                    <section class="w3-row"> <!--auto scrolling slideshow-->
+                        <h2 class="w3-animate-zoom" style="font-size: 2em;"> Behold The Might Of GALACTUS</h2>
+                            <div class="w3-content w3-display-container" style="max-width:800px;position:relative">
+                                <img class="mySlides" src="images/galactus.jpg" alt="Galactus" style="width:100%">
+                                <img class="mySlides" src="images/galactus2.jpg" alt="Galactus 2" style="width:100%">
+                                <img class="mySlides" src="images/galactus3.jpg" alt="Galactus 3" style="width:100%">
+                                <img class="mySlides" src="images/galactus4.jpg" alt="Galactus 4" style="width:100%">
+                                <img class="mySlides" src="images/galactus5.jpg" alt="Galactus 5" style="width:100%">
+                                <img class="mySlides" src="images/galactus6.jpg" alt="Galactus 6" style="width:100%">
+                            
+                                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                            </div>
+                            
+                            <script>
+                                let slideIndex = 0;
+                            
+                                function showDivsAuto() {
+                                let i;
+                                const slides = document.getElementsByClassName("mySlides");
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                slideIndex++;
+                                if (slideIndex > slides.length) {slideIndex = 1}
+                                slides[slideIndex - 1].style.display = "block";
+                                setTimeout(showDivsAuto, 4000);
+                                }
+                            
+                                function plusDivs(n) {
+                                slideIndex += n;
+                                showManual(slideIndex);
+                                }
+                            
+                                function showManual(n) {
+                                let i;
+                                const slides = document.getElementsByClassName("mySlides");
+                                if (n > slides.length) {slideIndex = 1}
+                                if (n < 1) {slideIndex = slides.length}
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                slides[slideIndex - 1].style.display = "block";
+                                }
+                            
+                                window.onload = showDivsAuto;
+                            </script>
+                    </section> <!--end auto scrolling slideshow-->
+                    <section class="d-flex justify-content-center p-5"> <!--the galactus prologue-->
+                        <p>
+                            The mighty Galactus is a threat like no other,<br> 
+                            devouring every world he happens upon throughout<br>
+                            his devestating path of relentless destruction. <br>
+                            No single hero is powerful enough to face him alone.<br>
+                            Thus, Galactus is the Ultimate Threat!
+                        </p>
+                    </section>
+            </main>
+            <div class="footer">
+            <footer>
+                <p>Tim Roddy  &copy; 2025</p>
+            </footer>
+            </div> <!--footer-->
+        </div> <!--end wrapper-->
+    </body>
+</html>
